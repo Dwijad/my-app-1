@@ -5,7 +5,7 @@ metadata:
   name: image-demo-helm-repo
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 10s
   provider: generic
   secretRef:
     name: flux-system
