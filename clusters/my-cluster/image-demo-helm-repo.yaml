@@ -1,0 +1,13 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: image-demo-helm-repo
+  namespace: flux-system
+spec:
+  interval: 10s
+  provider: generic
+  type: oci
+  url: oci://github.com/Dwijad/helm-example
+  secretRef:
+    name: bearer-token-auth
