@@ -10,4 +10,4 @@ spec:
   type: default
   url: https://github.com/Dwijad/helm-example
   secretRef:
-    name: regcred
+    name: bearer-token-auth
