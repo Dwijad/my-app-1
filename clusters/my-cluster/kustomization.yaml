@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - config-map.yaml
+  - flux-image-policy-demo.yaml
+  - flux-image-repo-demo.yaml
+  - flux-image-update-auto-demo.yaml
+  - image-demo-helm-release.yaml
+  - image-demo-helm-repo.yaml
+configMapGenerator:
+  - name: image-demo-helm-cm
+    files:
+      - values.yaml=config-map.yaml
+configurations:
+  - kustomizeconfig.yaml
