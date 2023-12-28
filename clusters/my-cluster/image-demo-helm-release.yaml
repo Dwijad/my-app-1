@@ -8,12 +8,12 @@ spec:
   chart:
     spec:
       chart: nginx-charts
-      interval: 5m0s
+      interval: 10s
       reconcileStrategy: ChartVersion
       sourceRef:
         kind: HelmRepository
         name: image-demo-helm-repo
-  interval: 10m0s
+  interval: 10s
   valuesFrom:
   - kind: ConfigMap
     name: image-demo-helm-cm
