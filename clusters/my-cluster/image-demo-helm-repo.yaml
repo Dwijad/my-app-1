@@ -1,0 +1,13 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: image-demo-helm-repo
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  provider: generic
+  secretRef:
+    name: flux-system
+  type: oci
+  url: oci://ghcr.io/dwijad/helm-example
