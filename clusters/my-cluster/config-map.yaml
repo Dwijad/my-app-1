@@ -1,0 +1,3 @@
+Deployment:
+  imagePullPolicy: Always
+  image: ghcr.io/dwijad/helm-example:1.0.1 # {"$imagepolicy": "flux-system:flux-image-policy-demo"} 
